@@ -2,7 +2,6 @@ package leetcode9;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println(isPalindromeSecondWay(1));
         System.out.println(isPalindromeSecondWay(121));
     }
 
@@ -10,22 +9,22 @@ public class Main {
     public static boolean isPalindromeFirstWay(int x) {
         String num = String.valueOf(x);
         String firstPart;
-        String secondPart = "";
+        StringBuilder secondPart = new StringBuilder();
         if(num.length()%2==0){
             firstPart = num.substring(0, num.length()/2);
             String secondPartFake = num.substring(num.length()/2);
             for (int i=secondPartFake.length()-1; i>=0; i--) {
-                secondPart+=secondPartFake.charAt(i);
+                secondPart.append(secondPartFake.charAt(i));
             }
-            return firstPart.equals(secondPart);
+            return firstPart.equals(secondPart.toString());
         }
         else
             firstPart = num.substring(0, num.length()/2+1);
-            String secondPartFake = num.substring(num.length()/2);
+        String secondPartFake = num.substring(num.length()/2);
             for (int i=secondPartFake.length()-1; i>=0; i--) {
-            secondPart+=secondPartFake.charAt(i);
+            secondPart.append(secondPartFake.charAt(i));
             }
-            return firstPart.equals(secondPart);
+            return firstPart.equals(secondPart.toString());
     }
 
     // best way
