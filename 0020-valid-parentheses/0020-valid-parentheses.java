@@ -1,6 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
-        Stack<Character> stk=new Stack<>();
+      Stack<Character> stk=new Stack<>();
         for(char c:s.toCharArray())
         {
             if(c=='(' || c=='{' || c=='[')
@@ -16,6 +16,6 @@ class Solution {
                 stk.pop();
             }
         }
-        return stk.isEmpty();
+        return stk.isEmpty();  
     }
 }
