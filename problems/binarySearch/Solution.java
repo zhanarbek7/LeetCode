@@ -1,3 +1,5 @@
+package binarySearch;
+
 class Solution {
     public int search(int[] nums, int target) {
         int low = 0;
